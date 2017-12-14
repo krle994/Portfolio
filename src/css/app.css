@@ -1,0 +1,389 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.2;
+  background: transparent; }
+
+button:active {
+  outline: none;
+  border: none; }
+
+button:focus {
+  outline: 0; }
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  min-height: 100vh;
+  margin: 0;
+  z-index: -5; }
+
+#particles {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+#intro {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  padding: 0 3em;
+  width: 100%;
+  text-align: left; }
+
+nav.mainNavbar {
+  margin: 0;
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+  z-index: 2;
+  border-bottom: 1px solid #252525;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -ms-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out; }
+
+nav.mainNavbar ul.topnav {
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+ul.topnav li {
+  list-style: none;
+  float: left;
+  margin: 0; }
+
+ul.topnav li.topnav-right {
+  float: right;
+  margin: 0;
+  border-left: 1px solid #252525;
+  transform: skew(-30deg); }
+
+ul.topnav li.topnav-right a {
+  display: block;
+  padding: 1.3em 2em 1em 2em;
+  text-decoration: none;
+  text-align: center;
+  color: #cfcfcf;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.1em;
+  transform: rotate(0deg) translateY(0%);
+  min-height: 57px; }
+
+ul.topnav li a:hover {
+  color: #51C397; }
+
+ul.topnav li.dropdownMenu {
+  display: none; }
+
+img.logo {
+  padding: .4em;
+  margin: .3em 0 0 1em; }
+
+section.intro {
+  position: relative;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden; }
+  section.intro .text {
+    padding: 2.5em 0 .4em 0;
+    font-size: 56px;
+    color: #cfcfcf; }
+  section.intro .highlighted {
+    color: #51C397; }
+  section.intro h3 {
+    padding-bottom: 3em;
+    line-height: 1.4;
+    color: #cfcfcf; }
+
+section.intro .video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100; }
+
+button.check-me-out-btn {
+  background-color: transparent;
+  border: #51C397 solid 2px;
+  border-radius: 7px;
+  color: #51C397;
+  text-align: center;
+  padding: .5em 1em;
+  margin: 0 0 2rem 1rem;
+  transition: all 0.5s;
+  cursor: pointer; }
+  button.check-me-out-btn:hover {
+    background-color: rgba(90, 217, 168, 0.3); }
+  button.check-me-out-btn span {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    transition: 0.5s; }
+    button.check-me-out-btn span:after {
+      position: absolute;
+      content: "\00bb";
+      opacity: 0;
+      top: 0;
+      right: -1em;
+      transition: 0.5s; }
+
+button.check-me-out-btn:hover span {
+  padding-right: 1.2em; }
+  button.check-me-out-btn:hover span:after {
+    opacity: 1;
+    right: 0; }
+
+section.about {
+  padding: 2em;
+  background-image: url("../assets/diagmonds_@2X.png");
+  border-top: 3px solid #252525;
+  border-bottom: 3px solid #252525; }
+  section.about .about-heading {
+    display: block;
+    margin: auto;
+    color: #cfcfcf;
+    width: 4em;
+    padding: 20px;
+    font-size: 38px;
+    border-bottom: 3px solid #51C397; }
+  section.about p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #787878;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3em;
+    display: block; }
+  section.about .myPic {
+    display: block; }
+    section.about .myPic img.personal {
+      display: block;
+      top: 1.7em;
+      left: 2.3em;
+      border-radius: 50%;
+      width: 100%;
+      margin-bottom: 2rem; }
+
+.skills {
+  margin-top: 12%; }
+
+.skillbar {
+  position: relative;
+  display: block;
+  margin: 1.4rem auto;
+  width: 85%;
+  background: #787878;
+  height: 2.4rem;
+  border-radius: 3px;
+  transition: 0.1s linear;
+  transition-property: width, background-color; }
+
+.skillbar-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ffffff;
+  background: #252525;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px; }
+
+.skillbar-title span {
+  display: block;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  height: 2.4rem;
+  line-height: 35px;
+  text-align: center;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px; }
+
+.skillbar-bar {
+  height: 2.4rem;
+  width: 0px;
+  background: #51C397;
+  border-radius: 3px; }
+
+.skill-bar-percent {
+  position: absolute;
+  right: 10px;
+  top: .3rem;
+  font-size: 1rem;
+  height: 1.4rem;
+  line-height: 1.5;
+  color: #cfcfcf; }
+
+section.portfolio {
+  margin: 0;
+  padding: 0;
+  background-image: url("../assets/smoke.jpg"); }
+  section.portfolio .port-wrap,
+  section.portfolio .port-wrap > .port-position {
+    padding: 8px; }
+  section.portfolio .port-position {
+    float: left;
+    margin: auto; }
+  section.portfolio .port-wrap:after {
+    content: "";
+    display: table;
+    clear: both;
+    text-align: center;
+    margin: 3rem 0; }
+  section.portfolio .content {
+    background-color: transparent;
+    border: 2px solid #51C397;
+    width: 90%;
+    margin: auto; }
+
+.port-heading {
+  display: block;
+  margin: 2rem auto 4rem auto;
+  color: #cfcfcf;
+  width: 5em;
+  padding: 20px;
+  font-size: 38px;
+  border-bottom: 3px solid #51C397; }
+
+.git-work {
+  display: block;
+  margin: 9rem auto 3rem auto;
+  text-align: center;
+  background-color: rgba(37, 37, 37, 0.5);
+  color: #51C397;
+  border: 3px solid #51C397;
+  border-radius: 7px;
+  transition: all 0.3s ease-in-out; }
+  .git-work:hover {
+    color: #cfcfcf; }
+  .git-work span {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    transition: 0.5s; }
+    .git-work span:after {
+      position: absolute;
+      content: "\00bb";
+      opacity: 0;
+      top: 0;
+      right: -1em;
+      transition: 0.5s; }
+
+button.git-work:hover span {
+  padding-right: 1.2em; }
+  button.git-work:hover span:after {
+    opacity: 1;
+    right: 0; }
+
+section.contact {
+  background-color: #171717;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-top: 3px solid #252525; }
+  section.contact .social-icons {
+    display: block;
+    text-align: center;
+    margin: 6rem 0 4rem 0; }
+  section.contact .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 4.4rem;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%; }
+  section.contact .fa:hover {
+    opacity: 0.7; }
+  section.contact .fa-facebook {
+    background: #3B5998;
+    color: white; }
+  section.contact .fa-linkedin {
+    background: #007bb5;
+    color: white; }
+  section.contact .fa-instagram {
+    background: #b2015e;
+    color: white; }
+  section.contact .fa-github-alt {
+    background: #a4c639;
+    color: white; }
+
+.contact-heading {
+  display: block;
+  margin: auto;
+  color: #cfcfcf;
+  width: 5em;
+  padding: 20px;
+  margin-bottom: 3rem;
+  font-size: 38px;
+  border-bottom: 3px solid #51C397; }
+
+h5.copywrite {
+  font-size: 14px;
+  color: #787878;
+  text-align: center;
+  margin: 8rem 0 1rem 0; }
+
+.sub-wrap {
+  width: 100%;
+  display: block;
+  padding: 0;
+  margin: 0; }
+  .sub-wrap .sub-section {
+    width: 100%;
+    height: 8rem;
+    background-image: -webkit-linear-gradient(#252525 0, #252525 45%, #303030 45%, #303030 78%, #363636 78%, #363636 100%);
+    background-image: -moz-linear-gradient(#252525 0, #252525 45%, #303030 45%, #303030 78%, #363636 78%, #363636 100%);
+    background-image: -o-linear-gradient(#252525 0, #252525 45%, #303030 45%, #303030 78%, #363636 78%, #363636 100%);
+    background-image: linear-gradient(#252525 0, #252525 45%, #303030 45%, #303030 78%, #363636 78%, #363636 100%); }
+
+@media screen and (max-width: 680px) {
+  ul.topnav li:not(:nth-child(1)) {
+    display: none; }
+  ul.topnav li.dropdownMenu {
+    display: block;
+    float: right;
+    border: none;
+    transform: skew(0); }
+  ul.topnav.responsive li.dropdownMenu {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  ul.topnav.responsive {
+    position: relative; }
+  ul.topnav.responsive li {
+    display: inline;
+    float: none; }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left; }
+  #intro {
+    padding: 1.6rem;
+    height: calc(100% - 100px); }
+  section.intro .text {
+    padding-top: 4rem;
+    font-size: 43px;
+    line-height: 1.2; }
+  button.check-me-out-btn {
+    margin-left: .6rem; }
+  section.about .about-heading {
+    margin-bottom: 2.5rem; }
+  section.about .skillbar-title {
+    background-color: transparent; }
+  h5.copywrite {
+    line-height: 1.7; } }
