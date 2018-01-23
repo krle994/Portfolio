@@ -3,10 +3,10 @@ My first front end developer portfolio made using a gulp.js workflow
 
 ## Usage
 
-Download the node modules folder included or instal npm package with dependencies.
+Download and access through index.html
 
 ### Installation
-
+#### (for development)
 
 Install gulp, gulp-sass and browser-sync as dependencies.
 
