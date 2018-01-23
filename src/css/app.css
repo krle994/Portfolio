@@ -151,7 +151,8 @@ section.about {
   padding: 2em;
   background-image: url("../assets/diagmonds_@2X.png");
   border-top: 3px solid #252525;
-  border-bottom: 3px solid #252525; }
+  border-bottom: 3px solid #252525;
+  height: 100%; }
   section.about .about-heading {
     display: block;
     margin: auto;
@@ -232,7 +233,8 @@ section.about {
 section.portfolio {
   margin: 0;
   padding: 0;
-  background-image: url("../assets/smoke.jpg"); }
+  background-image: url("../assets/smoke.jpg");
+  height: 100%w; }
   section.portfolio .port-wrap,
   section.portfolio .port-wrap > .port-position {
     padding: 8px; }
@@ -343,7 +345,9 @@ h5.copywrite {
   width: 100%;
   display: block;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  position: relative;
+  bottom: 0; }
   .sub-wrap .sub-section {
     width: 100%;
     height: 8rem;
