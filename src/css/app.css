@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.2;
-  background: transparent; }
+  background: #252525; }
 
 button:active {
   outline: none;
@@ -112,9 +112,10 @@ section.intro .video-bg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: auto;
   height: 100vh;
-  z-index: -100; }
+  z-index: -100;
+  background-size: cover; }
 
 button.check-me-out-btn {
   background-color: transparent;
@@ -389,5 +390,11 @@ h5.copywrite {
     margin-bottom: 2.5rem; }
   section.about .skillbar-title {
     background-color: transparent; }
+    section.about .skillbar-title span {
+      background: transparent; }
   h5.copywrite {
     line-height: 1.7; } }
+
+@media screen and (min-height: 1300px) and (max-height: 1400px) {
+  video {
+    min-height: 100vh; } }
