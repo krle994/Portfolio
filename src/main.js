@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function dropdown() {
   var mainNav = document.getElementById("mainNav");
-  var x = document.getElementById("dropdownClick");    
+  var x = document.getElementById("dropdownClick");
   if (x.className === "topnav") {
   x.className += " responsive";
   mainNav.style.backgroundColor = "#101010";
@@ -31,7 +31,7 @@ function dropdown() {
 
 
 $(document).ready(function(){
-  
+
   //Progress bar animation
 
 $(window).scroll(function() {
@@ -47,24 +47,24 @@ $(window).scroll(function() {
 	 });
    }
   });
-     
-     
+
+
   //Fade in navbar background color on scroll
-  
-  var positionSmall = 0;
+
+  var start = 0;
     $(document).scroll(function () {
-        positionSmall = $(this).scrollTop();
-        if (positionSmall > 70) {
+        start = $(this).scrollTop();
+        if (start > 70) {
             $(".topnav").css('background-color', '#101010');
         } else {
             $(".topnav").css('background-color', 'transparent');
         }
     });
-  
+
   // Smooth transition when anchor is clicked
-  
-  $(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
+
+  $(document).on('click', 'a[href^="#"]', function (e) {
+    e.preventDefault();
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
