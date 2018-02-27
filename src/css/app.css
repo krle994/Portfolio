@@ -43,18 +43,18 @@ nav.mainNavbar {
   position: fixed;
   background-color: transparent;
   z-index: 2;
-  border-bottom: 1px solid #252525;
-  -webkit-transition: background-color 0.5s ease-in-out;
-  -moz-transition: background-color 0.5s ease-in-out;
-  -ms-transition: background-color 0.5s ease-in-out;
-  -o-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out; }
+  border-bottom: 1px solid #252525; }
 
 nav.mainNavbar ul.topnav {
   overflow: hidden;
   list-style: none;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -ms-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out; }
 
 ul.topnav li {
   list-style: none;
@@ -153,10 +153,13 @@ section.about {
   background-image: url("../assets/diagmonds_@2X.png");
   border-top: 3px solid #252525;
   border-bottom: 3px solid #252525;
-  height: 100%; }
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   section.about .about-heading {
     display: block;
-    margin: auto;
+    margin: 3rem auto 3rem auto;
     color: #cfcfcf;
     width: 4em;
     padding: 20px;
@@ -174,11 +177,12 @@ section.about {
     display: block; }
     section.about .myPic img.personal {
       display: block;
-      top: 1.7em;
+      top: 30vh;
       left: 2.3em;
       border-radius: 50%;
       width: 100%;
-      margin-bottom: 2rem; }
+      max-width: 500px;
+      margin: 0 auto 1.5rem auto; }
 
 .skills {
   margin-top: 12%; }
@@ -235,7 +239,11 @@ section.portfolio {
   margin: 0;
   padding: 0;
   background-image: url("../assets/smoke.jpg");
-  height: 100%w; }
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   section.portfolio .port-wrap,
   section.portfolio .port-wrap > .port-position {
     padding: 8px; }
@@ -357,7 +365,7 @@ h5.copywrite {
     background-image: -o-linear-gradient(#252525 0, #252525 45%, #303030 45%, #303030 78%, #363636 78%, #363636 100%);
     background-image: linear-gradient(#252525 0, #252525 45%, #303030 45%, #303030 78%, #363636 78%, #363636 100%); }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 780px) {
   ul.topnav li:not(:nth-child(1)) {
     display: none; }
   ul.topnav li.dropdownMenu {
@@ -386,6 +394,8 @@ h5.copywrite {
     line-height: 1.2; }
   button.check-me-out-btn {
     margin-left: .6rem; }
+  section.about {
+    height: 100%; }
   section.about .about-heading {
     margin-bottom: 2.5rem; }
   section.about .skillbar-title {
